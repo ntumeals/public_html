@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Magazine
+Version    : 1.0
+Released   : 20070627
+Description: A two-column, fixed-width template with light color blend.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=big5" />
+<title>登入票選系統</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default2.css" rel="stylesheet" type="text/css" />
+
+<base target="_blank">
+
+<style type="text/css">
+.style1 {
+	text-align: left;
+	margin-left: 120px;
+}
+</style>
+
+</head>
+<body onload="totop()">
+<a name="top"></a>
+<div id="page">
+	<div id="content">
+		<div id="twocols">
+			<div class="col2">
+				<h2 class="title">登入投票</h2>
+				<ul class="list">
+					<li class="first">
+					<form method="POST" action="http://daisy.csie.org/~a33kuo/vote/login.php" target="main">
+						<p align="center">帳號：<input type="text" name="id" size="10"><br>
+						密碼：<input type="password" name="password" size="10"></p>
+						<p class="style1"><b><font color="red">※ 帳號輸入說明</font></b><br />
+&nbsp;&nbsp;&nbsp;
+						教職員工以人事室「員工編號」為帳號。<br />
+&nbsp;&nbsp;&nbsp;
+						研究助理以「身份證字號」為帳號。<br />
+&nbsp;&nbsp;&nbsp;
+						學生以「學號」為帳號。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+						<br>
+						<br>
+						<b><font color="red">※	密碼輸入說明</font></b>&nbsp;&nbsp;&nbsp;&nbsp; <br>
+						&nbsp;&nbsp;&nbsp;
+						本國人士以「身分證字號」為密碼。<br>
+						&nbsp;&nbsp;&nbsp;
+						僑生以「統一證號」為密碼。&nbsp;&nbsp;&nbsp; <br>
+						&nbsp;&nbsp;&nbsp;
+						外籍生以「護照號碼」為密碼。</p>
+						<p align="center"><input type="submit" value="送出" name="B1"></p>
+						<p align="center">※ 若無法登入，請 
+						<a target="main" href="register.html">填寫個人資料</a> 進行投票。</p>
+					</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p align="center">　</div>
+</body>
+
+<script type="text/javascript">
+	function totop(){
+		location.href("login.html#top");
+	}
+</script>
+
+</html>

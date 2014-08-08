@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>登入票選系統</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default2.css" rel="stylesheet" type="text/css" />
+
+<base target="_blank" />
+
+<style type="text/css">
+.style1 {
+	text-align: left;
+	margin-left: 120px;
+}
+</style>
+
+<script>
+var url=window.location.toString();
+var key="";
+var value=""
+if(url.indexOf("?") != -1){
+	var ary=url.split("?")[1].split("&");
+	for(var i in ary){
+		key=ary[i].split("=")[0];
+		value=ary[i].split("=")[1];
+		if(key == "fail" && value == "1")
+			window.alert("請再登錄一次或填寫個人資料再投票!");
+		if(key == "voted" && value == "1")
+			window.alert("您已投過票了, 謝謝您的參與!");
+	}
+}
+else{
+}
+</script></head><body onload="totop()">
+<a name="top" />
+<div id="page">
+	<div id="content">
+		<div id="twocols">
+<div class="col2">
+				<h2 class="title">登入投票</h2>
+				<p>嗨～親愛的臺大教職員工及學生們大家好：
+				<br />
+依據個人資料保護法等相關規定，以下事項請參與本活動者詳閱：</p><p><font color="red">
+
+一、您參與投票時會提供您於本校計中所存放個人資料給膳食協調委員會執行小組工作人員，此個人資料之目的僅作為本活動評選用。</font></p><p><font color="red">
+二、上述個人資料為姓名、學號、教職員編號及單位，以上未獲得您的同意以前絕不會將您的個人資料揭露於第三人或使用於本活動之以外其他用途，且將於活動結束後全部刪除個人資料。</font></p><p><font color="red">
+三、參加者須願意提供以上之個人資料欄位，若不願意提供則無法參加本次活動。</font><br /><br />
+
+
+ 
+敬祝您順心愉快      膳食協調委員會執行小組 敬上<br />
+<br />
+ </p>
+ <input type="button" value="同意" onclick="window.open('https://meals.ga.ntu.edu.tw/meal_vote2013/index.aspx')" />   <input type="button" value="不同意" onclick="window.alert('不同意者無法進入本次活動');" />
+
+			</div>
+</div>
+		<p align="center">　</p></div>
+<script type="text/javascript">
+	function totop(){
+		location.href("login.html#top");
+	}
+</script>
+
+</div></body></html>
