@@ -19,18 +19,18 @@
 <ul>
   <li id="menu">
     <ul>
-      <li><a href="http://meals.ga.ntu.edu.tw/">回首頁</a></li>
-      <li><a target="main" href="news.html">最新公告</a></li>
-      <li><a target="main" href="intro.html">認識膳委會</a></li>
-      <li><a target="main" href="dietaryinfo.html">本校餐飲廠商資訊</a></li>
-      <li><a target="main" href="law.html">法規</a></li>
-      <li><a target="main" href="qa.html">Q&amp;A問答集</a></li>
-      <li><a target="main" href="lecture.html">會議紀錄及罰款</a></li>
-      <li><a target="main" href="download.html">下載專區</a></li>
-      <li><a target="main" href="activity.html">活動花絮</a></li>
-      <li><a target="main" href="contact.html">聯絡我們</a></li>
-      <li><a target="main" href="link.html">相關網站</a></li>
-      <li><a target="main" href="emergency.html">申訴及危急處理</a></li>
+      <li><a href="./">回首頁</a></li>
+      <li><a href="news">最新公告</a></li>
+      <li><a href="intro">認識膳委會</a></li>
+      <li><a target="main" href="2008/dietaryinfo.html">本校餐飲廠商資訊</a></li>
+      <li><a target="main" href="2008/law.html">法規</a></li>
+      <li><a target="main" href="2008/qa.html">Q&amp;A問答集</a></li>
+      <li><a href="meeting">會議紀錄及罰款</a></li>
+      <li><a target="main" href="2008/download.html">下載專區</a></li>
+      <li><a target="main" href="2008/activity.html">活動花絮</a></li>
+      <li><a target="main" href="2008/contact.html">聯絡我們</a></li>
+      <li><a target="main" href="2008/link.html">相關網站</a></li>
+      <li><a target="main" href="2008/emergency.html">申訴及危急處理</a></li>
       <li><a href="https://meals.ga.ntu.edu.tw/meals_checksys/index.asp">填報-衛生檢查表</a></li>
       <li><a href="https://meals.ga.ntu.edu.tw/tableware/">填報-餐具檢查</a></li>
     </ul>
@@ -38,7 +38,7 @@
 </ul>
 </div>
 <div id="content">
-  <?php include($path.'.php') ?>
+  <?php include('list.php') ?>
 </div>
 </div>
 <?php include('footer.php') ?>

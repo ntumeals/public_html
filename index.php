@@ -11,13 +11,20 @@ $app->get('/', function() use($app) {
   $app->render('index.php');
 });
 
-$app->get('/news', function() use($app) {
-  $app->render('main.php', array('path' => 'news'));
+$app->get('/:path', function($path) use($app) {
+  $app->render('main.php', array('path' => $path));
 });
 
 $app->notFound(function() use($app){
-  echo "\n";
-  print_r($app->request()->getResourceUri());
+  $url = $app->request()->getResourceUri();
+  $url = explode('#', $url)[0];
+  $url = explode('?', $url)[0];
+  switch($url) {
+    case '/2008/news.html':
+      $app->response()->redirect(ROOT_URI.'news');
+      break;
+  }
+//  print_r();
 //  $app->response()->redirect('/home/');
 //  $app->halt(302);
 });
