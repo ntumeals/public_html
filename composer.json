@@ -1,0 +1,12 @@
+{
+    "name": "ntumeals/public_html",
+    "require": {
+        "slim/slim": "2.0"
+    },
+    "authors": [
+        {
+            "name": "shouko",
+            "email": "h999342@gmail.com"
+        }
+    ]
+}
