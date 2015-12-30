@@ -23,10 +23,10 @@
       <li><a href="news">最新公告</a></li>
       <li><a href="intro">認識膳委會</a></li>
       <li><a target="main" href="2008/dietaryinfo.html">本校餐飲廠商資訊</a></li>
-      <li><a target="main" href="2008/law.html">法規</a></li>
-      <li><a target="main" href="2008/qa.html">Q&amp;A問答集</a></li>
+      <li><a href="law">法規</a></li>
+      <li><a href="qa">Q&amp;A問答集</a></li>
       <li><a href="meeting">會議紀錄及罰款</a></li>
-      <li><a target="main" href="2008/download.html">下載專區</a></li>
+      <li><a href="download">下載專區</a></li>
       <li><a target="main" href="2008/activity.html">活動花絮</a></li>
       <li><a target="main" href="2008/contact.html">聯絡我們</a></li>
       <li><a target="main" href="2008/link.html">相關網站</a></li>
