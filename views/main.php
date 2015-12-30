@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>國立臺灣大學膳食協調委員會</title>
+  <title><?= $title ?></title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <link href="<?= ROOT_URI ?>assets/default.css" rel="stylesheet" type="text/css" />
