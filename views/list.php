@@ -23,6 +23,15 @@
         }
         echo '</ul>';
         break;
+      case 'link':
+        echo '<ul class="list">';
+        if(isset($section['content'])) {
+          foreach($section['content'] as $entry) {
+            echo sprintf('<li>%s <a target="_blank" href="%s">%s</a></li>', $entry[0], $entry[1], $entry[2]);
+          }
+        }
+        echo '</li>';
+        break;
       case 'plain':
         echo $section['content'];
         break;
