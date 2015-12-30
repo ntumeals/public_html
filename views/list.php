@@ -30,7 +30,7 @@
             echo sprintf('<li>%s <a target="_blank" href="%s">%s</a></li>', $entry[0], $entry[1], $entry[2]);
           }
         }
-        echo '</li>';
+        echo '</ul>';
         break;
       case 'plain':
         echo $section['content'];
