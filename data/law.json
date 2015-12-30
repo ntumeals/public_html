@@ -1,0 +1,44 @@
+[
+  {
+    "title": "本校膳食管理相關法規",
+    "type": "list",
+    "content": [
+      {"files": [["本校餐飲場所除導盲犬外，禁止犬貓等伴侶動物入內","law_files/10302狂犬病-公告函.pdf","pdf"]]},
+      {"files": [["國立臺灣大學餐廳及福利社膳食衛生安全管理辦法","law_files/10302膳食衛生管理辦法-終1.pdf","pdf"]]},
+      {"files": [
+        ["國立臺灣大學加強校內食品衛生管理要點","law_files/foodmanage.htm","ie"],
+        ["","law_files/國立臺灣大學加強校內食品衛生管理要點.doc","word"]
+      ]},
+      {"files": [["國立臺灣大學緊急應變統一作業標準表暨窗口","law_files/台大緊急應變通一窗口.doc","word"]]},
+      {"files": [
+        ["國立臺灣大學疑似食物中毒案件處理要點","law_files/poison_handle.htm","ie"],
+        ["","law_files/國立臺灣大學疑似食物中毒案件處理要點(95.08.01行政會議修正版).doc","word"]]},
+      {"files": [["國立臺灣大學外訂盒餐衛生管理要點","download_files/S.doc","word"]]}
+    ]
+  },
+  {
+    "title": "政府機關膳食相關法規",
+    "type": "list",
+    "content": [
+      {"files": [["大專院校餐飲衛生管理工作指引","law_files/大專院校餐飲衛生管理工作指引.pdf","pdf"]]},
+      {"files": [["學校不銹鋼餐具使用304符號之規定","law_files/10308不鏽鋼餐具304規定-教育部.pdf","pdf"]]},
+      {"files": [["「非本國人民」在台工作相關法令","../download_files/20131209.pdf","pdf"]]},
+      {"files": [["用餐餐具不宜使用深色材質","download_files/20120914.pdf","pdf"]]},
+      {"files": [["一次用外帶飲料杯源頭減量及回收獎勵金實施方式","download_files/cup.doc","word"]]},
+      {"files": [["「非本國人民」在台工作相關法令相關訊息","law_files/foreiner.htm","ie"]]},
+      {"files": [
+        ["北市衛生局食品中毒專線","law_files/posion_taipei.htm","ie"],
+        ["","law_files/9404北市衛生局食品中毒專線.doc","word"]]},
+      {"files": [["食品安全衛生管理法","law_files/食品安全衛生管理法全文104.pdf","pdf"]]},
+      {"files": [["限制塑膠類托盤級包裝何使用","law_files/9901_plastic.pdf","pdf"]]},
+      {"files": [["食品衛生管理法施行細則","law_files/食品衛生管理法施行細則.doc","word"]]},
+      {"files": [
+        ["食品良好衛生規範","law_files/foodhygieneExample.htm","ie"],
+        ["","law_files/食品良好衛生規範.doc","word"]]},
+      {"files": [["學校餐廳廚房員生消費合作社衛生管理辦法","law_files/學校餐廳廚房員生消費合作社衛生管理辦法104.pdf","pdf"]]},
+      {"files": [["學校衛生法","law_files/20140117.pdf","pdf"]]},
+      {"files": [["免洗餐具限制使用對象、實施方法及實施日期","law_files/免洗餐具限制政策公告.pdf","pdf"]]},
+      {"files": [["購物限用塑膠袋限制使用對象、實施方式及實施日期","law_files/購物用塑膠袋限制使用政策公告.pdf","pdf"]]}
+    ]
+  }
+]

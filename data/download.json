@@ -1,0 +1,68 @@
+[
+  {
+    "title": "衛生檢查表格",
+    "type": "list",
+    "content": [
+      {"files": [["104/1/20 每周餐飲環境衛生檢查表-本校人員","download_files/10401環境檢查表-空白.doc","word"]]},
+      {"files": [["103/1/17 餐廳(福利社)「包商」環境衛生安全檢查表","download_files/check_cir.doc","word"]]},
+      {"files": [["103/1/17 餐廳「包商」膳食衛生安全檢查表","download_files/check_rest.doc","word"]]},
+      {"files": [["103/1/17 福利社「包商」膳食衛生安全檢查表","download_files/check_coor.doc","word"]]},
+      {"files": [["100/1/24 便餐車衛生安全檢查表","download_files/20110124_meal_cir.doc","word"]]}
+    ]
+  },
+  {
+    "title": "通行證申請",
+    "type": "list",
+    "content": [
+      {"files": [["校內餐飲業者送貨廠商貨車--通行證申請表","download_files/校內餐飲業者送貨廠商貨車--通行證申請表.doc","word"]]},
+      {"files": [["餐飲業者送貨廠商貨車停車證異動申請表(遺失、更換廠商或貨車)","download_files/drive_1020107.doc","word"]]}
+    ]
+  },
+  {
+    "title": "膳食衛生",
+    "type": "list",
+    "content": [
+      {"files": [["2012/01/31 餐飲工作表單(如附件)","download_files/1010131_worksheet.xls","excel"]]},
+      {"files": [["2011/3/22 餐飲業食品安全管制系統(HACCP)衛生評鑑證明廠商","http://consumer.fda.gov.tw/Food/Hygiene.aspx?nodeID=173","ie"]]},
+      {"files": [["99/9/10 臺灣大學餐飲廠商食材來源資料表","download_files/20100910_source.xls","excel"]]},
+      {"files": [["97/10/23 A型肝炎抗體篩檢流程","download_files/20081023_hepatitisA.ppt","powerpoint"]]},
+      {"files": [["96/8/23 食品衛生檢驗─食品衛生檢驗表格與流程","download_files/食品檢驗表格修改.doc","word"]]},
+      {"files": [["95/11/4 衛生檢驗申請表","download_files/衛生檢驗申請表_2.doc","word"]]}
+    ]
+  },
+  {
+    "title": "環境衛生",
+    "type": "list",
+    "content": [
+      {"files": [["103/10/16 環保局提供廢食用油回收契約書範例","download_files/1030926環保局廢油契約書範例.pdf","pdf"]]}
+    ]
+  },
+  {
+    "title": "餐飲資訊資料表",
+    "type": "list",
+    "content": [
+      {"files": [["95/9/14 校內餐飲資訊─「校內餐飲資訊」資料表","download_files/國立臺灣大學膳委會網站之校內餐飲資訊填寫表95.09.doc","word"]]}
+    ]
+  },
+  {
+    "title": "申訴及危急處理",
+    "type": "list",
+    "content": [
+      {"files": [["97/6 餐飲衛生安全意見單","download_files/customer%20opinion.doc","word"]]},
+      {"files": [["97/6 餐飲衛生安全意見處理報告表","download_files/handle%20report.doc","word"]]},
+      {"files": [["97/6 餐飲衛生安全意見處理作業流程圖","download_files/security%20opinion%20process.doc","word"]]},
+      {
+        "cat": "法規",
+        "files": [["國立臺灣大學緊急應變統一作業標準表暨窗口","law_files/緊急應變統一作業標準表暨窗口1031201.docx","word"]]},
+      {
+        "cat": "法規",
+        "files": [
+          ["國立臺灣大學疑似食物中毒案件處理要點","law_files/poison_handle.htm","ie"],
+          ["","law_files/國立臺灣大學疑似食物中毒案件處理要點(95.08.01行政會議修正版).doc","word"]
+        ]
+      },
+      {"files": [["97/3/4 臺北市政府衛生局<br>食品中毒事件攝食食品調查問卷","download_files/臺北市衛生局食品中毒事件攝食食品調查問卷.doc","word"]]},
+      {"files": [["97/3/4 臺北市衛生局<br>學校疑似食品中毒事件簡速報告單","download_files/學校疑似食品中毒事件簡速報告單.doc","word"]]}
+    ]
+  }
+]
