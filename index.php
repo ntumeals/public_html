@@ -25,8 +25,8 @@ $app->get('/:path', function($path) use($app) {
     "emergency" => "申訴及危急處理"
   );
   if(!isset($pages[$path])) {
-    $app->response()->redirect('./');
-    $app->halt(302);
+    echo 'Not Found';
+    $app->halt(404);
   }
   $app->render('main.php', array('path' => $path, 'title' => '國立臺灣大學膳食協調委員會 - '.$pages[$path]));
 });
@@ -52,9 +52,9 @@ $app->notFound(function() use($app){
     $app->response()->redirect(ROOT_URI.$rules[$url]);
     $app->halt(301);
   }
-//  print_r();
-//  $app->response()->redirect('/home/');
-//  $app->halt(302);
+//  $app->response()->redirect(ROOT_URI.'news');
+  echo 'Not Found';
+  $app->halt(404);
 });
 
 $app->run();
