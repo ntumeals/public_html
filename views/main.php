@@ -5,6 +5,7 @@
   <title><?= $title ?></title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <link rel="canonical" href="https://meals.ga.ntu.edu.tw/home/<?= $path ?>" />
   <link href="<?= ROOT_URI ?>assets/default.css" rel="stylesheet" type="text/css" />
   <link href="<?= ROOT_URI ?>assets/default2.css" rel="stylesheet" type="text/css" />
 
