@@ -12,7 +12,7 @@
 <br />
 </div>
 <div class="twocols">
-<div class="col2">
+<div class="">
 <?php
   $data = json_decode(file_get_contents('data/dietaryinfo/'.$type.'.json'), 1);
   foreach($data as $section) {
@@ -26,10 +26,14 @@
       }
       echo '</li>';
     }
+    if(count($section['info']) < 2) {
+      echo '<li class="first">&nbsp;</li>';
+    }
+    echo '<li><br></li>';
     foreach($section['data'] as $entry) {
       echo sprintf('<li><a href="%s">%s</a></li>', $entry[0][0] == 'h' ? $entry[1] : ROOT_URI."restaurant_info/".$entry[1].".html", $entry[0]);
     }
-    echo '</ul><p>&nbsp;</p>';
+    echo '</ul><p>&nbsp;</p><p>&nbsp;</p>';
   }
 ?>
    </div>
