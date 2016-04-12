@@ -8,7 +8,7 @@
   echo implode(" | ", $type_html);
 ?>
 <br />
-<a target="_blank" href="http://www.ntu.edu.tw/chinese2008/about/map.htm"> 臺灣大學地圖資訊</a><br />
+<a target="_blank" href="http://map.ntu.edu.tw/"> 臺灣大學地圖資訊</a><br />
 <br />
 </div>
 <div class="twocols">
