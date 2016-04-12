@@ -27,7 +27,7 @@
       echo '</li>';
     }
     foreach($section['data'] as $entry) {
-      echo sprintf('<li><a href="%s">%s</a></li>', $entry[0][0] == 'h' ? $entry[1] : "restaurant_info/".$entry[1].".html", $entry[0]);
+      echo sprintf('<li><a href="%s">%s</a></li>', $entry[0][0] == 'h' ? $entry[1] : ROOT_URI."restaurant_info/".$entry[1].".html", $entry[0]);
     }
     echo '</ul><p>&nbsp;</p>';
   }

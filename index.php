@@ -45,6 +45,10 @@ $app->get('/dietaryinfo/:type', function($type) use($app) {
   $app->render('main.php', array('func' => 'dietaryinfo', 'path' => 'dietaryinfo/'.$type, 'type' => $type, 'title' => '國立臺灣大學膳食協調委員會 - 餐飲業者介紹', 'pages' => get_pages(), 'types' => $types));
 });
 
+$app->get('/restaurant/:id', function($id) use($app) {
+  $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'id' => $id, 'title' => '國立臺灣大學膳食協調委員會 - ', 'pages' => get_pages()));
+});
+
 $app->get('/:path', function($path) use($app) {
   $pages = get_pages();
   if(!isset($pages[$path])) {
