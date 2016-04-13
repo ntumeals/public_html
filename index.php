@@ -28,6 +28,10 @@ function getDatabaseConnection() {
   return new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 }
 
+function getTitle($str) {
+  return $str." - 國立臺灣大學膳食協調委員會";
+}
+
 $app->get('/', function() use($app) {
   $app->render('index.php');
 });
@@ -89,11 +93,26 @@ $app->get('/dietaryinfo/:type', function($type) use($app) {
       "title" => $row['title']
     );
   }
-  $app->render('main.php', array('func' => 'dietaryinfo', 'path' => 'dietaryinfo/'.$type, 'type' => $type, 'data' => $data, 'title' => '國立臺灣大學膳食協調委員會 - 餐飲業者介紹', 'pages' => get_pages(), 'types' => $types));
+  $app->render('main.php', array('func' => 'dietaryinfo', 'path' => 'dietaryinfo/'.$type, 'type' => $type, 'data' => $data, 'title' => '餐飲業者介紹', 'pages' => get_pages(), 'types' => $types));
 });
 
 $app->get('/restaurant/:id', function($id) use($app) {
-  $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'id' => $id, 'title' => '國立臺灣大學膳食協調委員會 - ', 'pages' => get_pages()));
+  $db = getDatabaseConnection();
+  $stmt = $db->prepare("SELECT * FROM `restaurant` WHERE `id` = :id");
+  $stmt->execute(array(
+    ":id" => $id
+  ));
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  if(empty($result)) {
+    echo 'Not Found';
+    $app->halt(404);
+  }
+  $stmt = $db->prepare("SELECT `path` FROM `restaurant_image` WHERE `restaurant_id` = :id");
+  $stmt->execute(array(
+    ":id" => $id
+  ));
+  $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
+  $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'data' => $result, 'images' => $images, 'title' => $result['title'], 'pages' => get_pages()));
 });
 
 $app->get('/:path', function($path) use($app) {
@@ -102,7 +121,7 @@ $app->get('/:path', function($path) use($app) {
     echo 'Not Found';
     $app->halt(404);
   }
-  $app->render('main.php', array('func' => 'list', 'path' => $path, 'title' => '國立臺灣大學膳食協調委員會 - '.$pages[$path], 'pages' => $pages));
+  $app->render('main.php', array('func' => 'list', 'path' => $path, 'title' => $pages[$path], 'pages' => $pages));
 });
 
 $app->notFound(function() use($app){
@@ -124,6 +143,10 @@ $app->notFound(function() use($app){
   );
   if(isset($rules[$url])) {
     $app->response()->redirect(ROOT_URI.$rules[$url]);
+    $app->halt(301);
+  }
+  if(strpos($url, '2008/restaurant_info/images/') !== false) {
+    $app->response()->redirect(ROOT_URI.str_replace("/2008/restaurant_info/", "restaurant/", $url));
     $app->halt(301);
   }
 //  $app->response()->redirect(ROOT_URI.'news');

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title><?= $title ?></title>
+  <title><?= getTitle($title) ?></title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <link rel="canonical" href="https://meals.ga.ntu.edu.tw/home/<?= $path ?>" />

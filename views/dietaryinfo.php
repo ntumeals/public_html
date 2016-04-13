@@ -24,7 +24,7 @@
     echo '<li><br></li>';
     foreach($section['items'] as $entry) {
       if(isset($entry['id'])) {
-        echo sprintf('<li><a href="%s">%s</a></li>', $entry['id'], $entry['title']);
+        echo sprintf('<li><a href="../restaurant/%s">%s</a></li>', $entry['id'], $entry['title']);
       } else if(isset($entry['link'])) {
         echo sprintf('<li><a target="_blank" href="%s">%s</a></li>', $entry['link'], $entry['title']);
       }
