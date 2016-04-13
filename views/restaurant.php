@@ -11,6 +11,7 @@
 					<li><span>業者簡介</span>&nbsp; <br> <?= nl2br($data['description']) ?></li>
 				</ul><br />
 			</div>
+<?php if(count($images) > 0) { ?>
 			<div class="col2">
 				<h2 class="title">餐廳業者參考照片</h2>
 				<ul class="list">
@@ -21,5 +22,6 @@ foreach($images as $image) {
 ?>
 				</ul>
 			</div>
+<?php } ?>
 		</div>
 	<div style="clear: both;">&nbsp;</div>
