@@ -59,6 +59,11 @@ $app->get('/dietaryinfo/:type', function($type) use($app) {
     ":type" => $types[$type][1]
   ));
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $stmt = $db->prepare("SELECT `title`,`link`,`".$types[$type][2]."` as `category` FROM `restaurant_link` WHERE `".$types[$type][2]."` IN (SELECT `id` FROM `category` WHERE `type` = :type)");
+  $stmt->execute(array(
+    ":type" => $types[$type][1]
+  ));
+  $links = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $stmt = $db->prepare("SELECT * FROM `category` WHERE `type` = :type");
   $stmt->execute(array(
     ":type" => $types[$type][1]
@@ -75,6 +80,12 @@ $app->get('/dietaryinfo/:type', function($type) use($app) {
   foreach($result as $row) {
     $data[$row['category']]['items'][] = array(
       "id" => $row['id'],
+      "title" => $row['title']
+    );
+  }
+  foreach($links as $row) {
+    $data[$row['category']]['items'][] = array(
+      "link" => $row['link'],
       "title" => $row['title']
     );
   }
