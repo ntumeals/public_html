@@ -58,7 +58,7 @@ $app->get('/dietaryinfo/:type', function($type) use($app) {
     $app->halt(404);
   }
   $db = getDatabaseConnection();
-  $stmt = $db->prepare("SELECT `id`, `title`,`".$types[$type][2]."` as `category` FROM `restaurant` WHERE `".$types[$type][2]."` IN (SELECT `id` FROM `category` WHERE `type` = :type)");
+  $stmt = $db->prepare("SELECT `id`, `title`,`".$types[$type][2]."` as `category` FROM `restaurant` WHERE `suspend` = 0 AND `".$types[$type][2]."` IN (SELECT `id` FROM `category` WHERE `type` = :type)");
   $stmt->execute(array(
     ":type" => $types[$type][1]
   ));
@@ -109,7 +109,7 @@ $app->get('/restaurant/:id', function($id) use($app) {
   }
   $group = array();
   if($result['group_type'] > 0) {
-    $stmt = $db->prepare("SELECT `id`, `title` FROM `restaurant` WHERE `id` IN (SELECT `restaurant_id` FROM `group_restaurant` WHERE `group_id` = :group_id)");
+    $stmt = $db->prepare("SELECT `id`, `title` FROM `restaurant` WHERE `suspend` = 0 AND `id` IN (SELECT `restaurant_id` FROM `group_restaurant` WHERE `group_id` = :group_id)");
     $stmt->execute(array(
       ":group_id" => $result['group_id']
     ));
@@ -147,7 +147,8 @@ $app->notFound(function() use($app){
     '/2008/contact.html' => 'contact',
     '/2008/link.html' => 'link',
     '/2008/emergency.html' => 'emergency',
-    '/2008/index.html' => 'news'
+    '/2008/index.html' => 'news',
+    '/2008/dietaryinfo_index.html' => 'dietaryinfo/manage'
   );
   if(isset($rules[$url])) {
     $app->response()->redirect(ROOT_URI.$rules[$url]);
