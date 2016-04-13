@@ -157,6 +157,12 @@ $app->notFound(function() use($app){
     $app->response()->redirect(ROOT_URI.str_replace("/2008/restaurant_info/", "restaurant/", $url));
     $app->halt(301);
   }
+  if(strpos($url, '2008/restaurant_info/') !== false) {
+    $fn = explode("2008/restaurant_info/", $url)[1];
+    $id = abs(str_replace("-", "", explode(".", $fn)[0]));
+    $app->response()->redirect(ROOT_URI."restaurant/".$id);
+    $app->halt(301);
+  }
 //  $app->response()->redirect(ROOT_URI.'news');
   echo 'Not Found';
   $app->halt(404);
