@@ -164,9 +164,11 @@ $app->notFound(function() use($app){
     if(count($fn) > 1) {
       switch($fn[0]) {
         case "1st%20girls%20dorm":
+        case "1st girls dorm":
           $fn = '109'.str_pad($fn[1], 7, "0", STR_PAD_LEFT);
           break;
         case "small%20fu":
+        case "small fu":
           $fn = '744'.str_pad($fn[1], 7, "0", STR_PAD_LEFT);
           break;
         default:
