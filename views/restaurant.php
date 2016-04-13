@@ -1,4 +1,13 @@
 <h1 class="title"><span><?= $data['title'] ?></span></h1>
+<?php
+if(!empty($group)) {
+  $group_html = array();
+  foreach($group as $entry) {
+    $group_html[] = sprintf('<a href="%s">%s</a>', $entry['id'], $entry['title']);
+  }
+  echo implode(" | ", $group_html);
+}
+?>
 		<div id="twocols">
 			<div class="col2">
 				<ul class="list">

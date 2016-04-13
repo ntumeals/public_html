@@ -107,12 +107,20 @@ $app->get('/restaurant/:id', function($id) use($app) {
     echo 'Not Found';
     $app->halt(404);
   }
+  $group = array();
+  if($result['group_type'] > 0) {
+    $stmt = $db->prepare("SELECT `id`, `title` FROM `restaurant` WHERE `id` IN (SELECT `restaurant_id` FROM `group_restaurant` WHERE `group_id` = :group_id)");
+    $stmt->execute(array(
+      ":group_id" => $result['group_id']
+    ));
+    $group = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
   $stmt = $db->prepare("SELECT `path` FROM `restaurant_image` WHERE `restaurant_id` = :id");
   $stmt->execute(array(
     ":id" => $id
   ));
   $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
-  $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'data' => $result, 'images' => $images, 'title' => $result['title'], 'pages' => get_pages()));
+  $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'data' => $result, 'images' => $images, 'group' => $group, 'title' => $result['title'], 'pages' => get_pages()));
 });
 
 $app->get('/:path', function($path) use($app) {
