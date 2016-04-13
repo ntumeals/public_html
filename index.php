@@ -160,6 +160,21 @@ $app->notFound(function() use($app){
   }
   if(strpos($url, '2008/restaurant_info/') !== false) {
     $fn = explode("2008/restaurant_info/", $url)[1];
+    $fn = explode("/", $fn);
+    if(count($fn) > 1) {
+      switch($fn[0]) {
+        case "1st%20girls%20dorm":
+          $fn = '109'.str_pad($fn[1], 7, "0", STR_PAD_LEFT);
+          break;
+        case "small%20fu":
+          $fn = '744'.str_pad($fn[1], 7, "0", STR_PAD_LEFT);
+          break;
+        default:
+          $fn = $fn[1];
+      }
+    } else {
+      $fn = $fn[0];
+    }
     $id = abs(str_replace("-", "", explode(".", $fn)[0]));
     $app->response()->redirect(ROOT_URI."restaurant/".$id);
     $app->halt(301);
