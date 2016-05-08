@@ -148,7 +148,10 @@ $app->notFound(function() use($app){
     '/2008/link.html' => 'link',
     '/2008/emergency.html' => 'emergency',
     '/2008/index.html' => 'news',
-    '/2008/dietaryinfo_index.html' => 'dietaryinfo/manage'
+    '/2008/dietaryinfo.html' => 'dietaryinfo/manage',
+    '/2008/dietaryinfo_index.html' => 'dietaryinfo/manage',
+    '/2008/dietaryinfo_type.html' => 'dietaryinfo/type',
+    '/2008/dietaryinfo_place.html' => 'dietaryinfo/place'
   );
   if(isset($rules[$url])) {
     $app->response()->redirect(ROOT_URI.$rules[$url]);
