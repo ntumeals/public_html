@@ -4,21 +4,21 @@
     "type": "list",
     "content": [
         {
+            "cat": "2016餐飲廠商票選活動",
+            "date": "2016/5/31",
+            "files": [
+                ["網路票選活動結果","download_files/2016年優良服務餐飲廠商網路票選活動結果.doc","word"],
+                ["抽獎得獎名單","download_files/2016年抽獎得獎名單.doc","word"]
+            ],
+            "highlight": "1"
+        },
+        {
             "cat": "行政",
             "date": "2016/5/17",
             "files": [
                 ["教育部 「大專院校餐飲衛生輔導表」","download_files/10506輔導表-基本資料.docx","word"],
                 ["「大專院校餐飲衛生輔導表填列說明」","download_files/10506輔導表-說明.docx","word"]
             ]
-        },
-        {
-            "cat": "2016餐飲廠商票選活動",
-            "date": "2016/4/30",
-            "files": [
-                ["網路票選活動結果","download_files/2016年優良服務餐飲廠商網路票選活動結果.doc","word"],
-                ["抽獎得獎名單","download_files/2016年抽獎得獎名單.doc","word"]
-            ],
-            "highlight": "1"
         },
         {
             "cat": "膳食",
