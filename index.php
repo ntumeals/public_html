@@ -109,7 +109,7 @@ $app->get('/restaurant/:id', function($id) use($app) {
   }
   $group = array();
   if($result['group_type'] > 0) {
-    $stmt = $db->prepare("SELECT `id`, `title` FROM `restaurant` WHERE `suspend` = 0 AND `id` IN (SELECT `restaurant_id` FROM `group_restaurant` WHERE `group_id` = :group_id)");
+    $stmt = $db->prepare("SELECT `id`, `title` FROM `restaurant` WHERE `suspend` = 0 AND `group_type` = 2 AND `group_id` = :group_id");
     $stmt->execute(array(
       ":group_id" => $result['group_id']
     ));
