@@ -19,6 +19,7 @@
 <div class="">
 <?php
   foreach($data as $section) {
+    if(count($section['items']) == 0) continue;
     echo '<ul class="list2">';
     echo sprintf('<li class="first"><h2 class="title">%s</h2></li><li class="first">%s</li>', $section['name'], $section['other']);
     echo '<li><br></li>';
