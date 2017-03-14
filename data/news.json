@@ -4,6 +4,20 @@
     "type": "list",
     "content": [
         {
+            "cat": "行政",
+            "date": "2017/1/28",
+            "files": [
+                ["餐廳「包商」膳食衛生安全檢查表","download_files/10601餐廳膳食檢查表修.docx","word"]
+            ]
+        },
+        {
+            "cat": "膳食",
+            "date": "2017/1/28",
+            "files": [
+                ["福利社「包商」膳食衛生安全檢查表","download_files/10601福利社膳食檢查表.doc","word"]
+            ]
+        },
+        {
             "cat": "2016餐飲廠商票選活動",
             "date": "2016/5/31",
             "files": [
@@ -25,20 +39,6 @@
             "date": "2016/3/23",
             "files": [
                 ["校園食材登錄平臺 (請以 Google Chrome 或 Firefox 瀏覽器開啟)","https://fatraceschool.moe.gov.tw/frontend/\" target=\"_blank","ie"]
-            ]
-        },
-        {
-            "cat": "行政",
-            "date": "2016/1/28",
-            "files": [
-                ["餐廳「包商」膳食衛生安全檢查表 ","download_files/105餐廳膳食檢查表.docx","word"]
-            ]
-        },
-        {
-            "cat": "膳食",
-            "date": "2016/1/28",
-            "files": [
-                ["福利社「包商」膳食衛生安全檢查表 ","download_files/105福利社膳食檢查表.doc","word"]
             ]
         },
         {
