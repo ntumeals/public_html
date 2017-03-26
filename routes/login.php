@@ -26,6 +26,6 @@ $app->post('/admin/login', function() use($app) {
     $app->halt(302);    
   }
   $_SESSION['user'] = $result['user'];
-  $app->response()->redirect('./');
+  $app->response()->redirect('dashboard');
   $app->halt(302);
 });

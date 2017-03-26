@@ -14,7 +14,7 @@ $form_items = [
   ['餐飲分類', 'dietary_type', $dietary_type],
   ['地點分類', 'dietary_location', $dietary_location],
   ['管理單位', 'dietary_manage', $dietary_manage],
-  ['營業狀況', 'disabled', ['正常', '停業']]
+  ['營業狀況', 'suspend', ['正常', '停業']]
 ];
 ?>
 <form method="POST">

@@ -29,7 +29,7 @@ $app->post('/admin/restaurant_add', function() use($app) {
     $app->response()->redirect('login');
     $app->halt(302);
   }
-  $cols = ['title', 'name', 'location', 'company', 'open', 'tel', 'type', 'description', 'website', 'group_type', 'group_id', 'dietary_type', 'dietary_location', 'dietary_manage', 'disabled'];
+  $cols = ['title', 'name', 'location', 'company', 'open', 'tel', 'type', 'description', 'website', 'group_type', 'group_id', 'dietary_type', 'dietary_location', 'dietary_manage', 'suspend'];
   $sql = 'INSERT INTO restaurant ('.implode(', ', $cols).') VALUES (:'.implode(', :', $cols).')';
   $db = getDatabaseConnection();
   $stmt = $db->prepare($sql);
