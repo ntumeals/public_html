@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 require 'config.php';
+session_start();
 
 $app = new \Slim\Slim(
   array('templates.path' => './views')
@@ -22,6 +23,13 @@ function get_pages() {
     "link" => "相關網站",
     "emergency" => "申訴及危急處理"
  );
+}
+
+function get_admin_pages() {
+  return [
+    'admin' => '網站管理',
+    'admin/restaurant_add' => '新增餐廳'
+  ];
 }
 
 function getDatabaseConnection() {
@@ -122,6 +130,10 @@ $app->get('/restaurant/:id', function($id) use($app) {
   $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
   $app->render('main.php', array('func' => 'restaurant', 'path' => 'restaurant/'.$id, 'data' => $result, 'images' => $images, 'group' => $group, 'title' => $result['title'], 'pages' => get_pages()));
 });
+
+include 'routes/admin.php';
+include 'routes/login.php';
+include 'routes/restaurant_add.php';
 
 $app->get('/:path', function($path) use($app) {
   $pages = get_pages();

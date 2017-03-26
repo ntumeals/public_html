@@ -32,6 +32,12 @@ foreach($pages as $key => $title) {
   </li>
 </ul>
 </div>
+<?php
+if (isset($_SESSION['flash'])) {
+  echo $_SESSION['flash'];
+  unset($_SESSION['flash']);
+}
+?>
 <div id="content">
   <?php include($func.'.php') ?>
 </div>
