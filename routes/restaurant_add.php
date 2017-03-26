@@ -1,6 +1,10 @@
 <?php
 
 $app->get('/admin/restaurant_add', function() use($app) {
+  if (!isset($_SESSION['user'])) {
+    $app->response()->redirect('login');
+    $app->halt(302);
+  }
   $db = getDatabaseConnection();
   $stmt = $db->prepare('SELECT * FROM category');
   $stmt->execute();
