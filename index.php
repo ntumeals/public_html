@@ -28,7 +28,8 @@ function get_pages() {
 function get_admin_pages() {
   return [
     'admin' => '網站管理',
-    'admin/restaurant_add' => '新增餐廳'
+    'admin/restaurant_add' => '新增餐廳',
+    'admin/restaurant_photo_add' => '新增餐廳照片'
   ];
 }
 
@@ -133,7 +134,7 @@ $app->get('/restaurant/:id', function($id) use($app) {
 
 include 'routes/admin.php';
 include 'routes/login.php';
-include 'routes/restaurant_add.php';
+include 'routes/admin_restaurant.php';
 
 $app->get('/:path', function($path) use($app) {
   $pages = get_pages();
