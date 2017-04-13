@@ -10,7 +10,7 @@ $form_items = [
   ['業者簡介', 'description'],
   ['網站', 'website'],
   ['群組類型', 'group_type', ['無', '廣場本體', '廣場成員']],
-  ['群組編號', 'group_id'],
+  ['群組名稱', 'group_id', $groups],
   ['餐飲分類', 'dietary_type', $dietary_type],
   ['地點分類', 'dietary_location', $dietary_location],
   ['管理單位', 'dietary_manage', $dietary_manage],

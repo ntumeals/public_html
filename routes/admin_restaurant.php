@@ -9,9 +9,16 @@ $app->get('/admin/restaurant_add', function() use($app) {
   $stmt = $db->prepare('SELECT * FROM category');
   $stmt->execute();
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  $cat = [1=> [], 2 => [], 3 => []];
+  $cat = [1=> [0 => ''], 2 => [0 => ''], 3 => [0 => '']];
   foreach ($result as $row) {
     $cat[$row['type']][$row['id']] = $row['name'];
+  }
+  $stmt = $db->prepare('SELECT id, title FROM restaurant WHERE group_type = 1 AND suspend = 0');
+  $stmt->execute();
+  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $groups = [0 => ''];
+  foreach ($result as $row) {
+    $groups[$row['id']] = $row['title'];
   }
   $app->render('main.php', [
     'func' => 'admin_restaurant_add',
@@ -20,7 +27,8 @@ $app->get('/admin/restaurant_add', function() use($app) {
     'path' => 'admin/restaurant_add',
     'dietary_location' => $cat[1],
     'dietary_type' => $cat[2],
-    'dietary_manage' => $cat[3]
+    'dietary_manage' => $cat[3],
+    'groups' => $groups
   ]);
 });
 
