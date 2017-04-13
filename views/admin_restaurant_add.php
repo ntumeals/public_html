@@ -29,8 +29,10 @@ $form_items = [
         echo sprintf('<option value="%s">%s</option>', $key, $label);
       }
       echo '</select>';
+    } else if ($item[1] == 'description') {
+      echo '<textarea name="description"></textarea>';
     } else {
-      echo sprintf('<input name="%s">',$item[1]);
+      echo sprintf('<input name="%s" />',$item[1]);
     }
     echo '<td></tr>';
   }
