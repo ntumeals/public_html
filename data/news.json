@@ -4,6 +4,14 @@
     "type": "list",
     "content": [
         {
+            "cat": "2017餐飲廠商票選活動",
+            "date": "2017/4/27",
+            "files": [
+                ["參加餐飲廠商票選活動網址(請點擊開啟相關連結)","https://meals.ga.ntu.edu.tw/vote/","ie"]
+            ],
+            "highlight": "1"
+        },
+        {
             "cat": "行政",
             "date": "2017/1/28",
             "files": [
@@ -16,15 +24,6 @@
             "files": [
                 ["福利社「包商」膳食衛生安全檢查表","download_files/10601福利社膳食檢查表.doc","word"]
             ]
-        },
-        {
-            "cat": "2016餐飲廠商票選活動",
-            "date": "2016/5/31",
-            "files": [
-                ["網路票選活動結果","download_files/2016年優良服務餐飲廠商網路票選活動結果.doc","word"],
-                ["抽獎得獎名單","download_files/2016年抽獎得獎名單.doc","word"]
-            ],
-            "highlight": "1"
         },
         {
             "cat": "行政",
