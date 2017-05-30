@@ -4,14 +4,6 @@
     "type": "list",
     "content": [
         {
-            "cat": "2017餐飲廠商票選活動",
-            "date": "2017/4/27",
-            "files": [
-                ["參加餐飲廠商票選活動網址(請點擊開啟相關連結)","https://meals.ga.ntu.edu.tw/vote/","ie"]
-            ],
-            "highlight": "1"
-        },
-        {
             "cat": "行政",
             "date": "2017/1/28",
             "files": [
